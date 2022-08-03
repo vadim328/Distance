@@ -1,42 +1,9 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 #include <algorithm>
 #include <iterator>
 
-void quickSort(int* numbers, int left, int right) {
-	int pivot = numbers[(left + right) / 2];
-	int left_border = left;
-	int right_border = right;
-	int value;
-	while (right_border >= left_border) {
-
-		while (numbers[left_border] < pivot) {
-			left_border++;
-		}
-
-		while (numbers[right_border] > pivot) {
-			right_border--;
-		}
-
-		if (right_border >= left_border) {
-			value = numbers[left_border];
-			numbers[left_border] = numbers[right_border];
-			numbers[right_border] = value;
-			left_border++;
-			right_border--;
-		}	
-	}
-	if (right_border > left) {
-		quickSort(numbers, left, right_border);
-	}
-	if (left_border < right) {
-		quickSort(numbers, right_border, right);
-	}
-}
-
-
-int main()
-{
+int main() { // time limit exceeded in 15 test
 	int32_t n, k;
 	std::cin >> n >> k;
 	int32_t *a = new int32_t[n];
