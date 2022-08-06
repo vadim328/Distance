@@ -1,5 +1,4 @@
-# Distance
-Yandex Contest 
+# Yandex Contest 2021
 
 Task "Boarding the plane".
 
